@@ -156,3 +156,5 @@ utils/                        Metrics, checkpointing, logging, visualization
 
 
 Dataset management is not a user-facing task. This baseline assumes the official UUSIVC2026 `TRAIN`/`VAL` package layout and keeps path expansion inside `datasets/uusivc2026_paths.py`.
+
+This repository is built upon the [Swin-Unet](https://github.com/HuCaoFighting/Swin-Unet) codebase. We thank the authors for making their work publicly available.
