@@ -92,7 +92,7 @@ python -B train.py `
 
 ## Evaluate Locally
 
-`test.py` evaluates the labeled local holdout split created from `TRAIN`. It does not evaluate the released `VAL` package, because `VAL` labels and masks are not public. Use the same `--local-val-fraction` value as training if you override it.
+`test.py` evaluates the labeled local holdout split created from `TRAIN`. Use the same `--local-val-fraction` value as training if you override it.
 
 ```powershell
 python -B test.py `
@@ -124,8 +124,6 @@ ceus_seg/<Dataset>/annotations/*.npz
 video_seg/<Dataset>/annotations/*.npz
 ```
 
-The output directory also includes `submission_summary.json` for local inspection; it is not added to the zip.
-
 ## Metrics Reference
 
 Standalone reference implementations are provided in `metrics_reference/`:
@@ -151,8 +149,5 @@ test.py                       Local holdout evaluation entry
 predict.py                    Competition-format prediction entry
 utils/                        Metrics, checkpointing, logging, visualization
 ```
-
-
-Dataset management is not a user-facing task. This baseline assumes the official UUSIVC2026 `TRAIN`/`VAL` package layout and keeps path expansion inside `datasets/uusivc2026_paths.py`.
 
 This repository is built upon the [Swin-Unet](https://github.com/HuCaoFighting/Swin-Unet) codebase. We thank the authors for making their work publicly available.
