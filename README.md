@@ -38,8 +38,6 @@ The pretrained [Swin-Tiny checkpoint](https://github.com/SwinTransformer/storage
 pretrained_ckpt/swin_tiny_patch4_window7_224.pth
 ```
 
-Model checkpoints and generated results are written under `outputs/` at runtime. The `outputs/` directory is not required in the public repository and should not be uploaded.
-
 ## Train
 
 Training uses the labeled `TRAIN` package. By default, the dataloader builds a deterministic local holdout from `TRAIN` for per-epoch validation and best-checkpoint selection, because the released `VAL` package has no labels.
